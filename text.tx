@@ -1,0 +1,61 @@
+<div className="row">
+          {quick minHeight: '120px', 
+                  cursoActions.map((action, index) => (
+            <div className="col" key={index}>
+              <div 
+                className="card" 
+                style={{
+                 r: 'pointer',
+                  transition: 'transform 0.2s ease',
+                  borderLeft: '4px solid var(--primary-color)'
+                }}
+                onClick={action.action}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <h3>{action.icon} {action.title}</h3>
+                <p>{action.description}</p>
+                <div style={{ 
+                  position: 'absolute', 
+                  bottom: '1rem', 
+                  right: '1rem', 
+                  fontSize: '0.8rem', 
+                  opacity: 0.7, 
+                  color: 'var(--primary-color)' 
+                }}>
+                  Click to proceed →
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+
+        # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
